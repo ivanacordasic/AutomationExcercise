@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.tablesorter.min.js"></script>
+<script src="js/Chart.min.js"></script>
+<script src="js/moment.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script>
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<title>Cucumber Reports  - Steps Overview</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+        <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation"     class="active" ><a href="overview-steps.html">Steps</a></li>
+        <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>No Name (add projectName to cucumber-reporting.properties)</td>
+      <td>10 Jul 2023, 19:42</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+  </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Steps Statistics</h2>
+      <p>The following graph shows step statistics for this build. Below list is based on results.
+ step does not provide information about result then is not listed below.
+ Additionally @Before and @After are not counted because they are part of the scenarios, not steps.</p>
+  </div>
+</div>
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table id="tablesorter" class="stats-table table-hover">
+
+        <thead>
+          <tr class="header">
+            <th>Implementation</th>
+            <th>Occurrences</th>
+            <th>Average duration</th>
+            <th>Max duration</th>
+            <th>Total durations</th>
+            <th>Ratio</th>
+          </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+              <td class="location">com.AutomationExercise.step_definitions.AE_stepDefinitions.userClicksContinueButton()</td>
+              <td>2</td>
+              <td class="duration" data-value="1547720900">1.547</td>
+              <td class="duration" data-value="1547720900">1.599</td>
+              <td class="duration" data-value="3095441800">3.095</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.AutomationExercise.step_definitions.AE_stepDefinitions.userClicksCreateAcc_button()</td>
+              <td>2</td>
+              <td class="duration" data-value="1213090000">1.213</td>
+              <td class="duration" data-value="1213090000">1.526</td>
+              <td class="duration" data-value="2426180000">2.426</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.AutomationExercise.step_definitions.AE_stepDefinitions.userClicksOnTheSignupLoginButton()</td>
+              <td>2</td>
+              <td class="duration" data-value="1224187400">1.224</td>
+              <td class="duration" data-value="1224187400">1.410</td>
+              <td class="duration" data-value="2448374800">2.448</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.AutomationExercise.step_definitions.AE_stepDefinitions.userEntersAddress(java.lang.String)</td>
+              <td>2</td>
+              <td class="duration" data-value="58499050">0.058</td>
+              <td class="duration" data-value="58499050">0.059</td>
+              <td class="duration" data-value="116998100">0.116</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.AutomationExercise.step_definitions.AE_stepDefinitions.userEntersAddress2(java.lang.String)</td>
+              <td>2</td>
+              <td class="duration" data-value="59510200">0.059</td>
+              <td class="duration" data-value="59510200">0.060</td>
+              <td class="duration" data-value="119020400">0.119</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.AutomationExercise.step_definitions.AE_stepDefinitions.userEntersAndAddress(java.lang.String,java.lang.String)</td>
+              <td>2</td>
+              <td class="duration" data-value="116314300">0.116</td>
+              <td class="duration" data-value="116314300">0.119</td>
+              <td class="duration" data-value="232628600">0.232</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.AutomationExercise.step_definitions.AE_stepDefinitions.userEntersCity(java.lang.String)</td>
+              <td>2</td>
+              <td class="duration" data-value="48281750">0.048</td>
+              <td class="duration" data-value="48281750">0.049</td>
+              <td class="duration" data-value="96563500">0.096</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.AutomationExercise.step_definitions.AE_stepDefinitions.userEntersCompany(java.lang.String)</td>
+              <td>2</td>
+              <td class="duration" data-value="47508700">0.047</td>
+              <td class="duration" data-value="47508700">0.049</td>
+              <td class="duration" data-value="95017400">0.095</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.AutomationExercise.step_definitions.AE_stepDefinitions.userEntersCountry(java.lang.String)</td>
+              <td>2</td>
+              <td class="duration" data-value="69940600">0.069</td>
+              <td class="duration" data-value="69940600">0.073</td>
+              <td class="duration" data-value="139881200">0.139</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.AutomationExercise.step_definitions.AE_stepDefinitions.userEntersDayOfBirth(java.lang.String)</td>
+              <td>2</td>
+              <td class="duration" data-value="95011850">0.095</td>
+              <td class="duration" data-value="95011850">0.098</td>
+              <td class="duration" data-value="190023700">0.190</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.AutomationExercise.step_definitions.AE_stepDefinitions.userEntersFirstName(java.lang.String)</td>
+              <td>2</td>
+              <td class="duration" data-value="53818950">0.053</td>
+              <td class="duration" data-value="53818950">0.054</td>
+              <td class="duration" data-value="107637900">0.107</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.AutomationExercise.step_definitions.AE_stepDefinitions.userEntersLastName(java.lang.String)</td>
+              <td>2</td>
+              <td class="duration" data-value="57499800">0.057</td>
+              <td class="duration" data-value="57499800">0.060</td>
+              <td class="duration" data-value="114999600">0.114</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.AutomationExercise.step_definitions.AE_stepDefinitions.userEntersMobilePhone(java.lang.String)</td>
+              <td>2</td>
+              <td class="duration" data-value="49507150">0.049</td>
+              <td class="duration" data-value="49507150">0.051</td>
+              <td class="duration" data-value="99014300">0.099</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.AutomationExercise.step_definitions.AE_stepDefinitions.userEntersMonthOfBirth(java.lang.String)</td>
+              <td>2</td>
+              <td class="duration" data-value="144764100">0.144</td>
+              <td class="duration" data-value="144764100">0.190</td>
+              <td class="duration" data-value="289528200">0.289</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.AutomationExercise.step_definitions.AE_stepDefinitions.userEntersPassword(java.lang.String)</td>
+              <td>2</td>
+              <td class="duration" data-value="114525100">0.114</td>
+              <td class="duration" data-value="114525100">0.158</td>
+              <td class="duration" data-value="229050200">0.229</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.AutomationExercise.step_definitions.AE_stepDefinitions.userEntersState(java.lang.String)</td>
+              <td>2</td>
+              <td class="duration" data-value="56500150">0.056</td>
+              <td class="duration" data-value="56500150">0.059</td>
+              <td class="duration" data-value="113000300">0.113</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.AutomationExercise.step_definitions.AE_stepDefinitions.userEntersTitle(java.lang.String)</td>
+              <td>2</td>
+              <td class="duration" data-value="36000150">0.036</td>
+              <td class="duration" data-value="36000150">0.040</td>
+              <td class="duration" data-value="72000300">0.072</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.AutomationExercise.step_definitions.AE_stepDefinitions.userEntersYearOfBirth(java.lang.String)</td>
+              <td>2</td>
+              <td class="duration" data-value="81008450">0.081</td>
+              <td class="duration" data-value="81008450">0.092</td>
+              <td class="duration" data-value="162016900">0.162</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.AutomationExercise.step_definitions.AE_stepDefinitions.userEntersZipCode(java.lang.String)</td>
+              <td>2</td>
+              <td class="duration" data-value="49000200">0.049</td>
+              <td class="duration" data-value="49000200">0.052</td>
+              <td class="duration" data-value="98000400">0.098</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.AutomationExercise.step_definitions.AE_stepDefinitions.userShouldBeAbleToSee(java.lang.String)</td>
+              <td>2</td>
+              <td class="duration" data-value="48754550">0.048</td>
+              <td class="duration" data-value="48754550">0.083</td>
+              <td class="duration" data-value="97509100">0.097</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.AutomationExercise.step_definitions.AE_stepDefinitions.user_can_see_message(java.lang.String)</td>
+              <td>2</td>
+              <td class="duration" data-value="13999850">0.013</td>
+              <td class="duration" data-value="13999850">0.015</td>
+              <td class="duration" data-value="27999700">0.027</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.AutomationExercise.step_definitions.AE_stepDefinitions.user_clicks_button()</td>
+              <td>2</td>
+              <td class="duration" data-value="1819186350">1.819</td>
+              <td class="duration" data-value="1819186350">2.404</td>
+              <td class="duration" data-value="3638372700">3.638</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.AutomationExercise.step_definitions.AE_stepDefinitions.user_clicks_on_the_DeleteAccButton()</td>
+              <td>2</td>
+              <td class="duration" data-value="1222101500">1.222</td>
+              <td class="duration" data-value="1222101500">1.299</td>
+              <td class="duration" data-value="2444203000">2.444</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.AutomationExercise.step_definitions.AE_stepDefinitions.user_clicks_on_the_signup_button()</td>
+              <td>2</td>
+              <td class="duration" data-value="1741481300">1.741</td>
+              <td class="duration" data-value="1741481300">1.828</td>
+              <td class="duration" data-value="3482962600">3.482</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.AutomationExercise.step_definitions.AE_stepDefinitions.user_is_on_the_home_page()</td>
+              <td>2</td>
+              <td class="duration" data-value="4121706250">4.121</td>
+              <td class="duration" data-value="4121706250">5.384</td>
+              <td class="duration" data-value="8243412500">8.243</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.AutomationExercise.step_definitions.AE_stepDefinitions.user_selects_checkbox(java.lang.String)</td>
+              <td>2</td>
+              <td class="duration" data-value="44500300">0.044</td>
+              <td class="duration" data-value="44500300">0.049</td>
+              <td class="duration" data-value="89000600">0.089</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.AutomationExercise.step_definitions.AE_stepDefinitions.user_should_be_able_to_see_home_page()</td>
+              <td>4</td>
+              <td class="duration" data-value="25500225">0.025</td>
+              <td class="duration" data-value="25500225">0.075</td>
+              <td class="duration" data-value="102000900">0.102</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.AutomationExercise.step_definitions.AE_stepDefinitions.user_should_be_able_to_see_message(java.lang.String)</td>
+              <td>2</td>
+              <td class="duration" data-value="23000300">0.023</td>
+              <td class="duration" data-value="23000300">0.031</td>
+              <td class="duration" data-value="46000600">0.046</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.AutomationExercise.step_definitions.AE_stepDefinitions.user_should_be_able_to_see_message_on_the_page(java.lang.String)</td>
+              <td>2</td>
+              <td class="duration" data-value="12000200">0.012</td>
+              <td class="duration" data-value="12000200">0.012</td>
+              <td class="duration" data-value="24000400">0.024</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.AutomationExercise.step_definitions.AE_stepDefinitions.user_should_be_able_to_see_message_on_the_top_of_the_page(java.lang.String)</td>
+              <td>2</td>
+              <td class="duration" data-value="21999900">0.021</td>
+              <td class="duration" data-value="21999900">0.023</td>
+              <td class="duration" data-value="43999800">0.043</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.AutomationExercise.step_definitions.Hooks.tearDownMethod(io.cucumber.java.Scenario)</td>
+              <td>2</td>
+              <td class="duration" data-value="618171050">0.618</td>
+              <td class="duration" data-value="618171050">0.620</td>
+              <td class="duration" data-value="1236342100">1.236</td>
+              <td class="passed">100.00%</td>
+            </tr>
+        </tbody>
+
+        <tfoot class="total">
+          <tr>
+            <td>31</td>
+            <td>64</td>
+            <td class="duration">0.464</td>
+            <td class="duration">8.243</td>
+            <td class="duration">29.721</td>
+            <td>Totals</td>
+          </tr>
+        </tfoot>
+
+      </table>
+    </div>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>
