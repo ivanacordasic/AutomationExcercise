@@ -1,6 +1,5 @@
-package com.AutomationExcercise.utilities;
+package com.AutomationExercise.utilities;
 
-import io.cucumber.java.sl.In;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -12,49 +11,49 @@ public class Driver {
 
     private Driver(){}
 
-    private static InheritableThreadLocal<WebDriver> poolDriver = new InheritableThreadLocal<>();
+    public static InheritableThreadLocal<WebDriver> driverPool = new InheritableThreadLocal<>();
 
     public static WebDriver getDriver(){
 
         String browserType = ConfigurationReader.getProperties("browser");
 
-        if (poolDriver.get() == null){
+        if (driverPool.get() == null){
 
             switch (browserType){
 
                 case "chrome":
-                    poolDriver.set(new ChromeDriver());
-                    poolDriver.get().manage().window().maximize();
-                    poolDriver.get().manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+                    driverPool.set(new ChromeDriver());
+                    driverPool.get().manage().window().maximize();
+                    driverPool.get().manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
                     break;
 
                 case "firefox":
-                    poolDriver.set(new FirefoxDriver());
-                    poolDriver.get().manage().window().maximize();
-                    poolDriver.get().manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+                    driverPool.set(new FirefoxDriver());
+                    driverPool.get().manage().window().maximize();
+                    driverPool.get().manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
                     break;
 
                 case "headless-chrome":
                     ChromeOptions options = new ChromeOptions();
                     options.addArguments("--headless=new");
-                    poolDriver.set(new ChromeDriver());
-                    poolDriver.get().manage().window().maximize();
-                    poolDriver.get().manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+                    driverPool.set(new ChromeDriver());
+                    driverPool.get().manage().window().maximize();
+                    driverPool.get().manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
             }
 
 
         }
 
-        return poolDriver.get();
+        return driverPool.get();
 
     }
 
 
     public static void closeDriver(){
 
-        if (poolDriver.get() != null){
-            poolDriver.get().quit();
-            poolDriver.remove();
+        if (driverPool.get() != null){
+            driverPool.get().quit();
+            driverPool.remove();
         }
 
     }

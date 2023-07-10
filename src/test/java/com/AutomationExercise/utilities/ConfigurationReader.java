@@ -1,4 +1,4 @@
-package com.AutomationExcercise.utilities;
+package com.AutomationExercise.utilities;
 
 import java.io.FileInputStream;
 import java.io.IOException;
