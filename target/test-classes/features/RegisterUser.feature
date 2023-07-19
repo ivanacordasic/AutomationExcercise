@@ -1,5 +1,6 @@
 Feature:
-  Agile story: User should be able to register to the Automation Exercise application
+  Agile story: User should be able to register to the Automation Exercise application,
+  as well as delete the account.
 
 
   @wip
