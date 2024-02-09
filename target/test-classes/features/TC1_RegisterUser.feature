@@ -3,8 +3,8 @@ Feature:
   as well as delete the account.
 
 
-  @wip
-  Scenario Outline: User Registration
+  @wip @UI
+  Scenario Outline: User Registration to Account deletion flow
     Given User is on the Home page
     And User should be able to see Home Page
     When User clicks on the Signup Login button
@@ -38,20 +38,8 @@ Feature:
     Then User should be able to see Home Page
 
     Examples:
-      | name   | email                    | Title | password | day | month | year | Last name | Company | Address     | Address2 | Country       | State   | City     | Zipcode | Mobile phone |
-      | Ivana  | iv.cordasic@gmail.com    | Mrs.  | cydeo123 | 19  | July  | 1993 | Tune      | Cydeo   | 1500 Bay Rd | 123      | United States | Florida | Miami    | 33139   | 305454845    |
-      | Daniel | daniel154831@hotmail.com | Mr.   | cydeo123 | 21  | July  | 1988 | Park      | LIV     | Bay Park    | 5        | United States | Chicago | Illinois | 15451   | 234233432    |
+      | name  | email                  | Title | password    | day | month | year | Last name | Company | Address     | Address2 | Country       | State   | City     | Zipcode | Mobile phone |
+      | Ivana | ivna123455@gmail.com  | Mrs.  | password123 | 19  | July  | 1993 | Tune      | Amazon  | 1500 Bay Rd | 123      | United States | Florida | Miami    | 33139   | 305454845    |
+      | Adam  | adm154831@hotmail.com | Mr.   | password123 | 21  | July  | 1988 | Park      | LIV     | Bay Park    | 5        | United States | Chicago | Illinois | 15451   | 234233432    |
 
 
-  @test
-  Scenario Outline:
-    Given user is on the Login Page
-    When user enters name "<name>"
-    And user enters email "<email>"
-    And user clicks to the Signup button
-    Then user should be directed to the sign up page
-    Then user clicks to the create account button
-
-    Examples:
-      | name  | email                 |
-      | Ivana | iv.cordasic@gmail.com |

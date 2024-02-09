@@ -12,7 +12,12 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
+import org.openqa.selenium.support.ui.Wait;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openxmlformats.schemas.wordprocessingml.x2006.main.impl.HdrDocumentImpl;
 
+import javax.swing.text.Utilities;
+import java.time.Duration;
 
 
 public class AE_stepDefinitions {
@@ -155,10 +160,10 @@ public class AE_stepDefinitions {
         Assert.assertEquals(message, accountCreatedPage.accCreatedMessage.getText());
     }
 
-    @When("User clicks Continue button")
-    public void userClicksContinueButton() {
-        accountCreatedPage.continueButton.click();
-    }
+//    @When("User clicks Continue button")
+//    public void userClicksContinueButton() {
+//        accountCreatedPage.continueButton.click();
+//    }
 
     @Then("User should be able to see {string}")
     public void userShouldBeAbleToSee(String expectedText) {
@@ -175,10 +180,10 @@ public class AE_stepDefinitions {
         Assert.assertEquals(message, homePage.accDeletedMessage.getText());
     }
 
-    @Then("User clicks Continue button.")
-    public void user_clicks_button() {
-        homePage.continueButton.click();
-    }
+//    @Then("User clicks Continue button.")
+//    public void user_clicks_button() {
+//        homePage.continueButton.click();
+//    }
 
 
 

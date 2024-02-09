@@ -18,7 +18,7 @@ public class BrowserUtils {
 
 
     /**
-     * Bahruzs' method for marking the element you are working on. It is useful to use during Demo meetings
+     * Method for marking the element you are working on. It is useful to use during Demo meetings
      * @param element
      */
 
