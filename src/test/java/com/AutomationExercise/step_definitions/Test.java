@@ -35,10 +35,11 @@ public class Test {
 //        loginPage.signupButton.click();
 //    }
 
-    @Then("user should be directed to the sign up page")
-    public void user_should_be_directed_to_the_sign_up_page() {
+//    @Then("user should be directed to the sign up page")
+//    public void user_should_be_directed_to_the_sign_up_page() {
+//
+//    }
 
-    }
 
     @Then("user clicks to the create account button")
     public void userClicksToTheCreateAccountButton() {
