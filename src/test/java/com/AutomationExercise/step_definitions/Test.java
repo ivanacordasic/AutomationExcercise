@@ -30,15 +30,15 @@ public class Test {
         loginPage.emailBox.sendKeys(email);
     }
 
-//    @When("user clicks to the Signup button")
-//    public void user_clicks_to_the_signup_button() {
-//        loginPage.signupButton.click();
-//    }
+    @When("user clicks to the Signup button")
+    public void user_clicks_to_the_signup_button() {
+        loginPage.signupButton.click();
+    }
 
-//    @Then("user should be directed to the sign up page")
-//    public void user_should_be_directed_to_the_sign_up_page() {
-//
-//    }
+    @Then("user should be directed to the sign up page")
+    public void user_should_be_directed_to_the_sign_up_page() {
+
+    }
 
 
     @Then("user clicks to the create account button")

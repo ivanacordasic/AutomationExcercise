@@ -79,5 +79,6 @@ Contributions to the Automation Exercise website are encouraged! As an SDET, you
 If you have any feedback or suggestions, feel free to open an issue or submit a pull request.
 
 
+
 Happy testing!
 
