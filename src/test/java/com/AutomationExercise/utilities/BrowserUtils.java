@@ -17,6 +17,7 @@ public class BrowserUtils {
     }
 
 
+
     /**
      * Method for marking the element you are working on. It is useful to use during Demo meetings
      * @param element
