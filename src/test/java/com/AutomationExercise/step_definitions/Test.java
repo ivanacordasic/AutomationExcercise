@@ -15,6 +15,8 @@ public class Test {
     LoginPage loginPage = new LoginPage();
     SignupPage signupPage = new SignupPage();
 
+
+
     @Given("user is on the Login Page")
     public void user_is_on_the_login_page() {
         Driver.getDriver().get("https://automationexercise.com/login");
